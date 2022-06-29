@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_home">
+
+    <ImageView
+            android:id="@+id/ivProfile_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E339"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+            android:id="@+id/tvName_home"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            tools:text="Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
+            android:layout_marginBottom="4dp" app:layout_constraintBottom_toTopOf="@+id/tvLocation_home"/>
+
+    <TextView
+            android:id="@+id/tvBreed_home"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            tools:text="Breed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/tvName_home" android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvName_home"/>
+
+    <TextView
+            android:id="@+id/tvLocation_home"
+            android:textSize="16dp"
+            android:textColor="@android:color/white"
+            tools:text="Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="32dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"/>
+
+    <View
+            android:id="@+id/item_swipe_left_indicator"
+            android:alpha="0"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:background="#A5F" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+            android:id="@+id/item_swipe_right_indicator"
+            android:alpha="0"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="right"
+            android:background="#5AF" app:layout_constraintEnd_toStartOf="@+id/item_swipe_left_indicator"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
